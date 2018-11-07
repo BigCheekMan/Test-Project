@@ -1,1 +1,108 @@
-<h1>alex</h1>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A generator</title>
+<script src="./jQueryLibrary.js"></script>
+<style>
+	body {
+		background-color: #051829;
+	}
+	#chosenName {
+		text-align: center;
+		font-size: 5em;
+		font-family: Futura, Abel, Gotham, Helvetica, Arial," sans-serif";
+		color: whitesmoke;
+	}
+	#RNGButton {
+		font-family: Futura, Abel, Gotham, Helvetica, Arial," sans-serif";
+    	border: none;
+    	color: black;
+    	padding: 15px 32px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 2px;
+    	cursor: pointer;
+	}
+</style>
+</head>
+
+<body>
+<center>
+<br><br>
+<button id="RNGButton">
+  Pick Winner
+</button>
+</center>
+
+<div id="chosenName"></div>
+
+<script>
+$("#RNGButton").click(function() {
+  var unfortunateSouls = [{
+    person: "Mahin"
+  }, {
+    person: "MD"
+  }, {
+    person: "Ricardo"
+  }, {
+    person: "Chime"  
+  }, {
+	  person: "Omar"
+  }, {
+	  person: "Jason"
+  }, {
+	  person: "Biraj"
+  }, {
+	  person: "Saleh"
+  }, {
+	  person: "Luis F"
+  }, {
+	  person: "Akash"
+  }, {
+	  person: "Alex"
+  }, {
+	  person: "Job"
+  }, {
+	  person: "Kevin R"
+  }, {
+	  person: "Andy"
+  }, {
+	   person: "Derek"
+  }, {
+	   person: "Alice"
+  }, {
+	   person: "Andoni"
+  }, {
+	   person: "Kevin M"
+  }, {
+	   person: "Brian V"
+  }, {
+	   person: "Paola"
+  }, {
+	   person: "Rifat"
+  }, {
+	   person: "Tenzin K"
+  }, {
+	   person: "Matthew"
+  }, {
+	   person: "Shafayet"
+  }, {
+	   person: "Nathan"
+  }, {
+	   person: "Bryan C"
+  }, {
+	   person: "Tarik"
+  }, {
+	   person: "Lewis P"
+  }];
+
+  var winner = Math.floor(Math.random() * unfortunateSouls.length)
+  $('div').html(unfortunateSouls[winner].person);
+});
+	
+</script>
+</body>
+</html>
